@@ -112,8 +112,7 @@ These outputs are stored in the `predict/` directory.
 
 ## 🏫 Affiliation
 
-🏛️ **Aerospace Information Research Institute, Chinese Academy of Sciences (AIRCAS)**  ([aircas.ac.cn](http://www.aircas.cn/))
-
+🏛️ **Aerospace Information Research Institute, Chinese Academy of Sciences (AIRCAS)**  ([aircas.ac.cn](http://www.aircas.cn/))  
 🎓 **University of Chinese Academy of Sciences (UCAS)**  ([ucas.edu.cn](https://www.ucas.edu.cn/))
 
 ---
