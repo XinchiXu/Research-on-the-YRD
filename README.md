@@ -1,6 +1,6 @@
-# Research on the Yellow River Delta (YRD) 🌊🌱
+# Research on the Yellow River Delta 🌊🌱
 
-This repository provides source codes and example data for generating a **Monthly water–soil–vegetation fractional abundance time series of the Yellow River Delta (2000–2024)** using medium-resolution satellite imagery (MODIS/061/MOD09GA).
+This repository provides source codes and example data for generating a **monthly water–soil–vegetation fractional abundance time series** of the **Yellow River Delta (YRD)** using medium-resolution satellite imagery **(MODIS/061/MOD09GA)**.
 
 The project focuses on fractional surface composition retrieval to support **long-term, process-oriented remote sensing analysis** in highly heterogeneous and human-regulated delta environments.
 
@@ -12,8 +12,10 @@ The project focuses on fractional surface composition retrieval to support **lon
 **Monthly Water–Soil–Vegetation Fractional Abundance Time Series of the Yellow River Delta (2000–2024)**
 
 - **Spatial extent:** Yellow River Delta, China  
-- **Temporal coverage:** 2000–2024 (monthly)  
-- **Spatial resolution:** Medium resolution (MODIS-based)  
+- **Temporal coverage:** March 2000 - December 2024 (monthly resolution)  
+- **Spatial resolution:** Medium resolution of 500 m (MODIS-based)  
+- **Data Format**: GeoTIFF raster files with abundance values (0-1 scale)
+- **File Naming**: `MM-YYYY.tif` (e.g., `01-2024.tif` for January 2024)
 - **Variables:**  
   - Water fractional abundance
   - Soil (bare land) fractional abundance
@@ -110,9 +112,27 @@ These outputs are stored in the `predict/` directory.
 
 ---
 
+## ❓ Frequently Asked Questions
+- Q: Why start from March 2000?  
+A: The MODIS Terra satellite began to operate after February 2000, which was exactly the beginning of the 21st century.
+
+- Q: Can I use this for other regions?  
+A: The model is YRD-specific. For other regions, retraining with local samples is recommended.
+
+- Q: How to handle missing months?  
+A: Some months may be missing due to clouds. Consider temporal interpolation or using multi-month composites.
+
+- Q: Are there validation data available?  
+A: Contact the maintainer for ground truth samples used in model training.
+
+- Q: What's the file size?  
+A: Each monthly GeoTIFF is ~1-2 MB. Complete dataset (2000-2024) is ~393 MB.
+
+---
+
 ## 🏫 Affiliation
 
-🏛️ **Aerospace Information Research Institute, Chinese Academy of Sciences (AIRCAS)**  ([aircas.ac.cn](http://www.aircas.cn/))  
+🏛️ **Aerospace Information Research Institute, Chinese Academy of Sciences (AIRCAS)**  ([aircas.cn](http://www.aircas.cn/))  
 🎓 **University of Chinese Academy of Sciences (UCAS)**  ([ucas.edu.cn](https://www.ucas.edu.cn/))
 
 ---
