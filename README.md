@@ -1,4 +1,4 @@
-# Research on the Yellow River Delta 🌊🌱
+# Research on the Yellow River Delta
 
 This repository provides source codes and example data for generating a **monthly water–soil–vegetation fractional abundance time series** of the **Yellow River Delta (YRD)** using medium-resolution satellite imagery **(MODIS/061/MOD09GA)**.
 
