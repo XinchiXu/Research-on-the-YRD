@@ -15,7 +15,7 @@ def get_modis_path(year, month):
     return f'./data/MODIS_YRD/MODIS_YRD_{month:02d}-{year}.tif'
 
 
-def abundance_extraction(year, month, data_full=True, save_preview=False, save_tif=False):
+def abundance_extraction(year, month, data_full=True, save_tif=False, save_preview=False):
     with rasterio.open(get_modis_path(year, month)) as src:
         clip_data, transform = mask(
             src,
@@ -37,6 +37,7 @@ def abundance_extraction(year, month, data_full=True, save_preview=False, save_t
             abundance_full = abundance_full.T.reshape(len(rf.classes_), height, width)
         else:
             abundance_full = np.full((len(rf.classes_), height, width), np.nan)
+            abundance_valid = None
         if save_tif:
             profile = src.profile.copy()
             profile.update({
@@ -71,4 +72,4 @@ if __name__ == '__main__':
     for y in years:
         months = [m for m in range(1, 13)] if y != 2000 else [m for m in range(3, 13)]
         for m in months:
-            abundance_extraction(y, m, save_tif=True)
+            abundance_extraction(y, m, save_tif=True, save_preview=True)

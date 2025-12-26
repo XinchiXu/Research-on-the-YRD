@@ -1,4 +1,4 @@
-// https://code.earthengine.google.com/
+// GEE URL: https://code.earthengine.google.com/
 // The code for downloading MODIS image data allows you to modify the target year or month at the corresponding position as needed.
 var region = ee.FeatureCollection('projects/ee-ipicturesque1616/assets/yrd_rect');
 var BANDS = ['sur_refl_b01', 'sur_refl_b02', 'sur_refl_b03', 'sur_refl_b04', 'sur_refl_b05', 'sur_refl_b06', 'sur_refl_b07'];

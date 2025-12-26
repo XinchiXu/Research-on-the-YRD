@@ -49,23 +49,24 @@ Research-on-the-YRD/
 
 ## 🐍 Python Environment Setup
 
-**Python version:** `Python 3.10` (recommended)
+**Python version:** `Python 3.12` (recommended)
 
 ### Required Python libraries
 
 ```python
-import numpy as np
-import geopandas as gpd
-import joblib
-import rasterio
-from rasterio.mask import mask
-import matplotlib.pyplot as plt
+import numpy as np               # Numerical computing and array operations
+import geopandas as gpd          # Geospatial vector data handling
+import joblib                    # Model serialization (loading the trained Random Forest)
+import rasterio                  # Geospatial raster data I/O and processing
+from rasterio.mask import mask   # Precise function for clipping raster by vector geometry
+import matplotlib.pyplot as plt  # Visualization and figure generation
 ```
 
-### Install dependencies
+### Install dependencies (Conda)
 
 ```bash
-pip install numpy geopandas joblib rasterio matplotlib
+conda create -n yrd python=3.12
+pip install numpy joblib matplotlib geopandas rasterio scikit-learn
 ```
 
 > 💡 Tip: Using a virtual environment (e.g., `conda` or `venv`) is strongly recommended.
